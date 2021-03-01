@@ -15,7 +15,7 @@ def openRpc(cfg, walletName):
     if walletName != None:
         url += "wallet/%s" % walletName
 
-    return AuthServiceProxy(url)
+    return AuthServiceProxy(url, timeout=240)
 
 # testRpc exits if RPC fails
 def testRpc(rpc, name):
